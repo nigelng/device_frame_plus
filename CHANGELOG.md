@@ -1,3 +1,7 @@
+## 1.3.0
+
+* Upgrade dependencies.
+  
 ## 1.2.2
 
 * Fixed virtual keyboard.
