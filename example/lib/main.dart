@@ -47,6 +47,7 @@ class MyAppState extends State<MyApp> {
           primarySwatch: Colors.purple,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
+        debugShowCheckedModeBanner: false,
         home: DefaultTabController(
           length: Devices.all.length,
           child: Scaffold(
