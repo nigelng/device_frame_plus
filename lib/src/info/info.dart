@@ -2,48 +2,36 @@ import 'package:device_frame_plus/src/devices/generic/desktop_monitor/device.dar
 import 'package:device_frame_plus/src/devices/generic/laptop/device.dart';
 import 'package:device_frame_plus/src/devices/generic/phone/device.dart';
 import 'package:device_frame_plus/src/devices/generic/tablet/device.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'identifier.dart';
 
-part 'info.freezed.dart';
-
 /// Info about a device and its frame.
-@freezed
-abstract class DeviceInfo with _$DeviceInfo {
-  /// Create a new device info.
-  const factory DeviceInfo({
-    /// Identifier of the device.
-    required DeviceIdentifier identifier,
+class DeviceInfo {
+  final DeviceIdentifier identifier;
+  final String name;
+  final EdgeInsets? rotatedSafeAreas;
+  final EdgeInsets safeAreas;
+  final Path screenPath;
+  final double pixelRatio;
+  final CustomPainter framePainter;
+  final Size frameSize;
+  final Size screenSize;
 
-    /// The display name of the device.
-    required String name,
+  const DeviceInfo({
+    required this.identifier,
+    required this.name,
+    this.rotatedSafeAreas,
+    required this.safeAreas,
+    required this.screenPath,
+    required this.pixelRatio,
+    required this.framePainter,
+    required this.frameSize,
+    required this.screenSize,
+  });
 
-    /// The safe areas when the device is in landscape orientation.
-    @Default(null) EdgeInsets? rotatedSafeAreas,
-
-    /// The safe areas when the device is in portrait orientation.
-    required EdgeInsets safeAreas,
-
-    /// A shape representing the screen.
-    required Path screenPath,
-
-    /// The screen pixel density of the device.
-    required double pixelRatio,
-
-    /// The safe areas when the device is in portrait orientation.
-    required CustomPainter framePainter,
-
-    /// The frame size in pixels.
-    required Size frameSize,
-
-    /// The size in points of the screen content.
-    required Size screenSize,
-  }) = _DeviceInfo;
-
+  // Factory constructors for generic devices
   factory DeviceInfo.genericTablet({
     required TargetPlatform platform,
     required String id,
@@ -127,6 +115,62 @@ abstract class DeviceInfo with _$DeviceInfo {
         pixelRatio: pixelRatio,
         framePainter: framePainter,
       );
+
+  DeviceInfo copyWith({
+    DeviceIdentifier? identifier,
+    String? name,
+    EdgeInsets? rotatedSafeAreas,
+    EdgeInsets? safeAreas,
+    Path? screenPath,
+    double? pixelRatio,
+    CustomPainter? framePainter,
+    Size? frameSize,
+    Size? screenSize,
+  }) {
+    return DeviceInfo(
+      identifier: identifier ?? this.identifier,
+      name: name ?? this.name,
+      rotatedSafeAreas: rotatedSafeAreas ?? this.rotatedSafeAreas,
+      safeAreas: safeAreas ?? this.safeAreas,
+      screenPath: screenPath ?? this.screenPath,
+      pixelRatio: pixelRatio ?? this.pixelRatio,
+      framePainter: framePainter ?? this.framePainter,
+      frameSize: frameSize ?? this.frameSize,
+      screenSize: screenSize ?? this.screenSize,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DeviceInfo &&
+          runtimeType == other.runtimeType &&
+          identifier == other.identifier &&
+          name == other.name &&
+          rotatedSafeAreas == other.rotatedSafeAreas &&
+          safeAreas == other.safeAreas &&
+          screenPath == other.screenPath &&
+          pixelRatio == other.pixelRatio &&
+          framePainter == other.framePainter &&
+          frameSize == other.frameSize &&
+          screenSize == other.screenSize;
+
+  @override
+  int get hashCode =>
+      identifier.hashCode ^
+      name.hashCode ^
+      rotatedSafeAreas.hashCode ^
+      safeAreas.hashCode ^
+      screenPath.hashCode ^
+      pixelRatio.hashCode ^
+      framePainter.hashCode ^
+      frameSize.hashCode ^
+      screenSize.hashCode;
+
+  @override
+  String toString() {
+    return 'DeviceInfo(identifier: $identifier, name: $name, rotatedSafeAreas: $rotatedSafeAreas, safeAreas: $safeAreas, screenPath: $screenPath, pixelRatio: $pixelRatio, framePainter: $framePainter, frameSize: $frameSize, screenSize: $screenSize)';
+  }
 }
 
 extension DeviceInfoExtension on DeviceInfo {
