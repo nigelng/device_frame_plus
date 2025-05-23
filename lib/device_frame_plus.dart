@@ -1,5 +1,3 @@
-library device_frame_plus;
-
 export 'src/devices/devices.dart';
 export 'src/frame.dart';
 export 'src/info/device_type.dart';

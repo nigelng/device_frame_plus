@@ -18,7 +18,7 @@ class FakeScreen extends StatelessWidget {
           ),
           Container(
             margin: mediaQuery.viewPadding,
-            color: Colors.white.withOpacity(0.5),
+            color: Colors.white.withAlpha(128),
           ),
           Container(
             margin: mediaQuery.padding,
