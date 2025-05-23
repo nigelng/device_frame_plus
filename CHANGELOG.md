@@ -1,10 +1,15 @@
+## 1.4.0
+
+* Removed freezed and json_serializable from project
+* Updated README.md
+
 ## 1.3.1
 
 * Rollback to 3.6.0 Dart SDK (#3).
 
 ## 1.3.0
 
-* Upgrade dependencies.
+* Upgraded dependencies.
   
 ## 1.2.2
 
