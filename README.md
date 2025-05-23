@@ -18,6 +18,17 @@ DeviceFrame(
 )
 ```
 
+## Examples
+<table>
+ <tr><td>
+   <img src="screenshots/Screenshot%202025-05-23%20at%2012.34.31.png">
+ </td><td>
+   <img src="screenshots/Screenshot%202025-05-23%20at%2012.35.21.png">
+ </td><td>
+   <img src="screenshots/Screenshot%202025-05-23%20at%2012.36.12.png">
+ </td></tr>
+</table>
+
 ## Usage
 
 ### Displaying a virtual keyboard
@@ -121,7 +132,7 @@ DeviceInfo.genericDesktopMonitor(
 )
 ```
 
-#### Latptop
+#### Laptop
 
 ```dart
 DeviceInfo.genericLaptop(
