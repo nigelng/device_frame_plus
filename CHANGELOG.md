@@ -1,3 +1,8 @@
+## Unreleased
+
+* Downgraded minimum Dart SDK version to 3.0.0.
+* Bumped minimum Flutter version to 3.10.0.
+
 ## 1.4.0
 
 * Removed freezed and json_serializable from project

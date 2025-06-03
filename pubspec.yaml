@@ -5,8 +5,8 @@ issue_tracker: https://github.com/StorybookToolkit/device_frame_plus/issues
 repository: https://github.com/StorybookToolkit/device_frame_plus
 
 environment:
-  sdk: '>=3.6.0 <4.0.0'
-  flutter: '>=3.2.0'
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
 
 dependencies:
   flutter:
