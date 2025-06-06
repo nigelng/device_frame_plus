@@ -1,8 +1,7 @@
 name: device_frame_plus
 description: Flutter package provides mockups for common devices, allowing developers to preview and test their apps within simulated device frames.
-version: 1.4.0
-issue_tracker: https://github.com/StorybookToolkit/device_frame_plus/issues
 repository: https://github.com/StorybookToolkit/device_frame_plus
+version: 1.4.0
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
