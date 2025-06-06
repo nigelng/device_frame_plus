@@ -1,7 +1,8 @@
-## Unreleased
+## 1.5.0
 
 * Downgraded minimum Dart SDK version to 3.0.0.
 * Bumped minimum Flutter version to 3.10.0.
+* Fixed pub.dev points.
 
 ## 1.4.0
 
