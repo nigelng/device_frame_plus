@@ -138,7 +138,7 @@ class _FramePainter extends CustomPainter {
     path_7.close();
 
     final paint_7_fill = Paint()..style = PaintingStyle.fill;
-    paint_7_fill.shader = ui.Gradient.linear(
+    paint_7_fill.shader = Gradient.linear(
         Offset(size.width * -8.601804e-8, size.height * 0.9525840),
         Offset(size.width * 0.4998630, size.height * 0.9525840), [
       const Color(0xff303135),
@@ -172,7 +172,7 @@ class _FramePainter extends CustomPainter {
     path_8.close();
 
     final paint_8_fill = Paint()..style = PaintingStyle.fill;
-    paint_8_fill.shader = ui.Gradient.linear(
+    paint_8_fill.shader = Gradient.linear(
         Offset(size.width * 0.9994788, size.height * 0.9525840),
         Offset(size.width * 0.4996158, size.height * 0.9525840), [
       const Color(0xff303135),
@@ -216,7 +216,7 @@ class _FramePainter extends CustomPainter {
     path_10.close();
 
     final paint_10_fill = Paint()..style = PaintingStyle.fill;
-    paint_10_fill.shader = ui.Gradient.linear(
+    paint_10_fill.shader = Gradient.linear(
         Offset(size.width * 0.4285266, size.height * 0.9482793),
         Offset(size.width * 0.5712028, size.height * 0.9482793), [
       const Color(0xff000000).withAlpha(128),
@@ -243,7 +243,7 @@ class _FramePainter extends CustomPainter {
     path_11.close();
 
     final paint_11_fill = Paint()..style = PaintingStyle.fill;
-    paint_11_fill.shader = ui.Gradient.linear(
+    paint_11_fill.shader = Gradient.linear(
         Offset(size.width * 0.4998630, size.height * 0.9655156),
         Offset(size.width * 0.4998630, size.height * 0.9896582), [
       const Color(0xff303135),
