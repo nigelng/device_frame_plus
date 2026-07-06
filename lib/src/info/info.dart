@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:device_frame_plus/src/devices/generic/desktop_monitor/device.dart';
 import 'package:device_frame_plus/src/devices/generic/laptop/device.dart';
 import 'package:device_frame_plus/src/devices/generic/phone/device.dart';

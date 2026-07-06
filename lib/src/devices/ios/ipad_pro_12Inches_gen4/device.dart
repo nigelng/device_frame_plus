@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:device_frame_plus/src/info/device_type.dart';
 import 'package:device_frame_plus/src/info/identifier.dart';
 import 'package:device_frame_plus/src/info/info.dart';
